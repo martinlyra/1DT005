@@ -1,8 +1,6 @@
 
 library ieee;
 use ieee.std_logic_1164.all;
-use ieee.std_logic_arith.all;
-use ieee.std_logic_unsigned.all;
 
 entity komp_grp_x is
   port(
@@ -11,9 +9,9 @@ entity komp_grp_x is
 
     o_u: out std_logic_vector(3 downto 0) -- u4, u3, u2, u1
   );
-end komp_grp_x;
+end entity komp_grp_x;
 
 architecture main_func of komp_grp_x is
   begin
 
-end main_func;
+end architecture main_func;

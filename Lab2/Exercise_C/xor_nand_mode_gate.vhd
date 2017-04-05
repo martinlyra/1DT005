@@ -10,8 +10,10 @@
 
 library ieee;
 use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
 
-entity XOR_NAND_mode_gate is
+entity xor_nand_mode_gate is
   port(
     i_a: in std_logic;
     i_b: in std_logic;
@@ -20,11 +22,11 @@ entity XOR_NAND_mode_gate is
 
     o_f: out std_logic
   );
-end entity XOR_NAND_mode_gate;
+end xor_nand_mode_gate;
 
-architecture main_func of XOR_NAND_mode_gate is
+architecture main_func of xor_nand_mode_gate is
   begin
     with i_mode select
       o_f <=  (not (i_a and i_b and i_c)) when '0',
             (not (i_a or i_b or i_c)) when others;
-end architecture main_func;
+end main_func;

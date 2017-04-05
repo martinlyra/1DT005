@@ -10,8 +10,10 @@
 
 library ieee;
 use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
 
-entity BCDcheck_ciruit is
+entity bcdcheck_circuit is
   port(
   i_x: in unsigned(3 downto 0); -- x3, x2, x1, x0
 
@@ -21,9 +23,9 @@ entity BCDcheck_ciruit is
   o_lo3: out std_logic;
   o_noBCD: out std_logic
   );
-end entity BCDcheck_ciruit;
+end bcdcheck_circuit;
 
-architecture main_func of BCDcheck_ciruit is
+architecture main_func of bcdcheck_circuit is
   begin
     -- max = 1 if x = 9
     if i_x = 9
@@ -45,4 +47,4 @@ architecture main_func of BCDcheck_ciruit is
     if i_x > 9
       o_noBCD <= '1';
     end if;
-end architecture main_func;
+end main_func;
