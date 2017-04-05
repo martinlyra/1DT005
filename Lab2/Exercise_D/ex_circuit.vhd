@@ -17,5 +17,5 @@ end ex_circuit;
 
 architecture main_func of ex_circuit is
   begin
-    o_u <= (i_x ** 2) + 1;
+    o_u <= (i_x * i_x) + 1;
 end main_func;

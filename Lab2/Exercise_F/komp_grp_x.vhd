@@ -1,3 +1,6 @@
+-- Exercise F: Compare two 2-bit binary numbers, the output should be a digit,
+-- showing which of the numbers is bigger than the other. An unqiue value for
+-- when the two numbers are equal.
 
 library ieee;
 use ieee.std_logic_1164.all;
@@ -15,5 +18,12 @@ end entity komp_grp_x;
 
 architecture main_func of komp_grp_x is
   begin
-
+    process (i_a, i_b) begin
+      if (i_a = i_b) then
+        o_u <= "0000";
+      elsif (i_a > i_b) then
+        o_u <= "0001";
+      else
+        o_u <= "0010";
+      end if;
 end architecture main_func;
